@@ -1,1 +1,21 @@
 
+				}
+
+			}
+
+		}
+
+		if ( targetPlayer ) {
+
+			const x = targetPlayer.actor.mesh.position.x - myPlayer.actor.mesh.position.x;
+			const y = targetPlayer.actor.mesh.position.y - myPlayer.actor.mesh.position.y;
+			const z = targetPlayer.actor.mesh.position.z - myPlayer.actor.mesh.position.z;
+
+			myPlayer.yaw = Math.radAdd( Math.atan2( x, z ), 0 );
+			myPlayer.pitch = - Math.atan2( y, Math.hypot( x, z ) ) % 1.5;
+
+		}
+
+	}
+
+}
